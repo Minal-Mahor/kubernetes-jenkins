@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demoapp
+spec:
+  selector:
+    matchLabels:
+      name: demoapp
+  template:
+    metadata:
+      labels:
+        name: demoapp
+    spec:
+      containers:
+      - name: demoapp
+        image: minalmahor/k8scluster
+        ports:
+        - containerPort: 40021
