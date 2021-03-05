@@ -1,16 +1,14 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: minimal-ingress
+  name: ingress-rules
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - http:
+  - host: minal.com
+    http:
       paths:
-      - path: 
-        backend:
-          service:
-            name: k8sapp
-            port:
-              number: 80
+      - backend:
+          serviceName: k8sapp
+          servicePort: 80
