@@ -8,9 +8,10 @@ spec:
   rules:
   - http:
       paths:
-      - backend:
+      - path: /
+        pathType: Prefix
+        backend:
           service:
             name: k8sapp
             port:
               number: 80
-
