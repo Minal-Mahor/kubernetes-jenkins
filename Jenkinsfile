@@ -5,7 +5,7 @@ node {
    
     stage('Docker-push'){
         docker.withRegistry('https://registry.hub.docker.com','dockerHub'){
-            def customImage = docker.build('minalmahor/my-app')
+            def customImage = docker.build('minalmahor/myflask')
             customImage.push()
         }
     }
