@@ -25,9 +25,9 @@ node {
     stage('Kubernetes pod'){
         bat "ibmcloud ks cluster config --cluster c0rj4r1d0huad5id0ut0"
         bat "kubectl config current-context"
-        bat 'kubectl apply -f service.yaml'
         bat 'kubectl apply -f deployment.yaml'
-        bat 'kubectl apply -f ingress.yaml'
+        bat 'kubectl apply -f service.yaml'
         bat 'kubectl get pods'
+        bat 'kubectl get services -o wide'
     }
 }
