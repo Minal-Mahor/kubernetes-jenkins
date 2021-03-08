@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: minalmahor/k8sapp
+        image: minalmahor/myapp
         ports:
         - containerPort: 5001
