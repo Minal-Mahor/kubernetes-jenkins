@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-deployment
+  name: myflask
   labels:
-    app: my-app
+    app: myflask
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: my-app
+      app: myflask
   template:
     metadata:
       labels:
-        app: my-app
+        app: myflask
     spec:
       containers:
-      - name: app
-        image: minalmahor/my-app
+      - name: flaskapp
+        image: minalmahor/myflask
         ports:
         - containerPort: 5001
