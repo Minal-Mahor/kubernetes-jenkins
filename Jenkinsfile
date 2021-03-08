@@ -5,7 +5,7 @@ node {
    
     stage('Docker-push'){
         docker.withRegistry('https://registry.hub.docker.com','dockerHub'){
-            def customImage = docker.build('minalmahor/k8sapp')
+            def customImage = docker.build('minalmahor/myapp')
             customImage.push()
         }
     }
