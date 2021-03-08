@@ -1,7 +1,0 @@
-version: '3'
-services:
-  simplepython:
-    container_name: mycontainer
-    build:
-      context: .
-      dockerfile: Dockerfile
