@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: myapp-deployment
   labels:
-    app: app
+    app: flaskapp
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: app
+      app: flaskapp
   template:
     metadata:
       labels:
-        app: app
+        app: flaskapp
     spec:
       containers:
-      - name: app
+      - name: flaskapp
         image: minalmahor/myflaskapp
         ports:
         - containerPort: 5001
