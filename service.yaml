@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: k8sapp
+  name: myapp-service
 spec:
   type: NodePort
   selector:
