@@ -1,17 +1,14 @@
-apiVersion: networking.k8s.io/v1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: minimal-ingress
+  name: ingress-minal
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: k8sapp
-            port:
-              number: 5001
+  - host: minal.com
+    http:
+      paths: 
+       - backend:
+          serviceName: myflask
+          servicePort: 5001
