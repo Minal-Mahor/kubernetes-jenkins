@@ -8,6 +8,6 @@ spec:
     app: myflask
   ports:
     - protocol: TCP
-      port: 3200
+      port: 5001
       targetPort: 5001
       nodePort: 30010
